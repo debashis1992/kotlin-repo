@@ -1,6 +1,7 @@
 fun main(args:Array<String>) {
-    println("Your fortune is: ${ getFortuneCookie(getBirthday()) }")
-//    getFinalFortuneCookie()
+//    println("Your fortune is: ${ getFortuneCookie(getBirthday()) }")
+    getFinalFortuneCookie()
+
 }
 
 fun getFortuneCookie(birthday: Int) : String {
@@ -16,14 +17,20 @@ fun getFortuneCookie(birthday: Int) : String {
     }
 
 }
-//fun getFinalFortuneCookie() {
-//    var res: String
-//    for(i in 1..10) {
-//        res = getFortuneCookie()
+fun getFinalFortuneCookie() {
+    var res: String
+    var i:Int = 0
+//    while(++i<10) {
+//        res = getFortuneCookie(getBirthday())
 //        println("Got Fortune : ${ res }")
 //        if(res.contains("Take it easy")) break
 //    }
-//}
+
+    repeat(10) {
+        var res2 = getFortuneCookie(getBirthday())
+        println("Got Fortune : ${res2}")
+    }
+}
 
 fun getBirthday() : Int {
     print("Enter your birthday:")
